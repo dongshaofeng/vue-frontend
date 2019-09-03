@@ -1,0 +1,41 @@
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud
+  labels:
+    app: cloud
+    version: 0.0.2
+spec:
+  selector:
+    matchLabels:
+      app: cloud
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cloud
+    spec:
+      containers:
+      - name: cloud
+        image: mirrors.com:5000/app/cloud:0.0.2
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud
+  labels:
+    app: cloud
+    version: 0.0.2
+spec:
+  selector:
+    app: cloud
+  type: NodePort
+  ports:
+  - name: tcp-31999
+    protocol: TCP
+    port: 8888
+    targetPort: 8888
+    nodePort: 31999
