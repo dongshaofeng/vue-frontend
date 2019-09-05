@@ -72,7 +72,7 @@ const user = {
           commit('SET_ROLES', data.roles)
           commit('SET_NAME', data.username)
           commit('SET_PICURL', data.avatarUrl)
-          //commit('SET_INTRODUCTION', data.user.introduction)
+          commit('SET_INTRODUCTION', data.username)
           const permissions = {}
           for (let i = 0; i < data.permissions.length; i++) {
             permissions[data.permissions[i]] = true

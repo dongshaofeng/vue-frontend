@@ -148,8 +148,8 @@ export default {
     getUserList() {
       this.listLoading = true
       fetchUserList(this.listPageParams).then(res => {
-//        this.list = res.data
-      this.list = res.content
+        //        this.list = res.data
+        this.list = res.content
         this.total = res.content.total
         this.listLoading = false
       })

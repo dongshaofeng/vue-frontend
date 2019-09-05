@@ -50,15 +50,12 @@ const permission = {
       return new Promise(resolve => {
         const { roles } = data
         let accessedRouters
-
-          let mid = [1,2,3,4]
-
         fetchUserTree().then(res => {
           if (roles.indexOf('ROLE_SUPER1') >= 0) {
             accessedRouters = asyncRouterMap
           } else {
-            //accessedRouters = filterAsyncRouter(asyncRouterMap, res.data)
-        accessedRouters = filterAsyncRouter(asyncRouterMap, mid)
+            // accessedRouters = filterAsyncRouter(asyncRouterMap, res.data)
+            accessedRouters = filterAsyncRouter(asyncRouterMap, res)
           }
           commit('SET_ROUTERS', accessedRouters)
           resolve()

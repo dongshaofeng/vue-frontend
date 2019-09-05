@@ -1,8 +1,8 @@
 {
-  "name": "Vue2-Admin",
+  "name": "vue-fronted",
   "version": "1.0.0",
-  "description": "Vue2-Admin",
-  "author": "liuweijw <liuweijw.github@foxmail.com>",
+  "description": "vue-fronted elementUI",
+  "author": "dongshaofeng@189.cn",
   "license": "MIT",
   "private": true,
   "scripts": {

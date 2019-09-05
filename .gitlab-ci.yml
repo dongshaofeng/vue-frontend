@@ -2,7 +2,7 @@ variables:
 #  DOCKER_DRIVER: overlay2                               # 用overlay2优化性能
   PROJECT_NAME: $CI_PROJECT_NAME                         # 用Gitlab工程名环境变量 打包的名字
   PROJECT_VERSION: "0.0.2"
-  DOCKER_PRIX:  "mirrors.com:5000/app/"
+  DOCKER_PRIX:  "mirrors.cloud.com:5000/app/"
 
 stages:
   - build
@@ -20,7 +20,7 @@ npm-build:
     - npm config  get cache
     - npm config get prefix
     - npm install
-    - npm run build
+    - npm run build:prod
     - docker build -t $DOCKER_PRIX$PROJECT_NAME:$PROJECT_VERSION . # 生成docker镜像
     - docker push $DOCKER_PRIX$PROJECT_NAME:$PROJECT_VERSION       # 提交到镜像库
   artifacts:

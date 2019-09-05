@@ -16,8 +16,8 @@ export function loginByUsername(username, password) {
   return request({
     url: '/auth/oauth/getToken',
     headers: {
-       // 'Authorization': 'Basic Y29tLmdpdGh1Yi5saXV3ZWlqdzpjb20uZ2l0aHViLmxpdXdlaWp3Ljg4ODg4OA=='
-       'Authorization': 'Basic U2FtcGxlQ2xpZW50SWQlM0F0Z2IuMjU4'
+      // 'Authorization': 'Basic Y29tLmdpdGh1Yi5saXV3ZWlqdzpjb20uZ2l0aHViLmxpdXdlaWp3Ljg4ODg4OA=='
+      'Authorization': 'Basic U2FtcGxlQ2xpZW50SWQlM0F0Z2IuMjU4'
     },
     method: 'post',
     params: data
@@ -36,7 +36,7 @@ export function getUserInfo() {
   return request({
     url: '/auth/user/me',
     headers: {
-       'Authorization': 'Basic U2FtcGxlQ2xpZW50SWQlM0F0Z2IuMjU4'
+      'Authorization': 'Basic U2FtcGxlQ2xpZW50SWQlM0F0Z2IuMjU4'
     },
     method: 'get'
   })
