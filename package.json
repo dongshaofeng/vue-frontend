@@ -1,7 +1,7 @@
 {
-  "name": "vue-fronted",
+  "name": "vue-frontend",
   "version": "1.0.0",
-  "description": "vue-fronted elementUI",
+  "description": "vue-frontend elementUI",
   "author": "dongshaofeng@189.cn",
   "license": "MIT",
   "private": true,
