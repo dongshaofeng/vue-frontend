@@ -18,3 +18,6 @@ npm run lint
 
 # auto fix
 npm run lint -- --fix
+
+# visit
+http://localhost:9527
