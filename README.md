@@ -2,12 +2,12 @@
 Vue frontend Admin UI , support Iview and ElementUI .   
 
 
-# How to Run 
+# How to Run
 cd vue-fronted  
 npm install  
 npm run dev  
 
-# How to build 
+# How to build
 npm run build:prod
 
 # --preview to start a server in local to preview
@@ -20,4 +20,6 @@ npm run lint
 npm run lint -- --fix
 
 # visit
-http://localhost:9527
+http://localhost:9527  
+![k8s](admin.png)  
+                                **figure admin ui**   
